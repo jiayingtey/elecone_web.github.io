@@ -1,0 +1,129 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<title>Form Processor</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Home</title>
+		<link href="styles.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript">
+			function preback(){
+				console.log('The page is PREBACk');
+				window.onunload = (event) => {
+					localStorage.setItem("isTransacted","Yes");
+				};
+			}
+			setTimeout("preback()",0);
+		</script>
+		<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+		<script src="script.js" async></script>
+
+	</head>
+	<body>
+		<header>
+			<div class="main">
+			  <div class="logo" >
+			    <img src="images/logo-octocat.svg" width="40px" height="40px">
+			    <h2>ELECLONE</h2>
+			  </div>
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li ><a href="camera1.html">Camera</a></li>
+					<li ><a href="server1.html">Server</a></li>
+					<li ><a href="analytics1.html">AI analytics</a></li>
+					<li class="cart">
+						<a href="cart.html">
+							<ion-icon name="basket"></ion-icon>Cart<span>&nbsp;0</span>
+						</a>
+					</li>
+					<li ><a href="form1.html">Sign up</a></li>
+				</ul>
+			  <div class="tagline" >
+			    <img src="images/undraw_order_confirmed_aaw7.svg"  width="200px" height="200px">
+			    <h1>Your Order is Confirmed</h1>
+			  </div>
+		</header>
+			<script type="text/javascript">
+
+			var formData = location.search;
+			console.log(location.search)
+			formData = formData.substring(1, formData.length);
+			while (formData.indexOf("+") != -1) {
+				formData = formData.replace("+", " ");
+			}
+			formData = unescape(formData);
+			var formArray = formData.split("&");
+			var para=new Array();
+
+			function completedFunc(){
+				localStorage.removeItem("isTransacted");
+				location.search="";
+				window.location.href = "home.html";
+			}
+			</script>
+			<article>
+			<div class="start">
+				<h4>Thanks for ordering with us!</h4>
+			  <h4>
+			  Below is a copy of the delivery order form that you may want to keep<br>
+			  to show our delivery man when the purchased items have reached.
+				</h4><br>
+			  <h2><b><u>Delivery Order</u></b></h2>
+			  <h4>Delivery Date:<span id="date" class="blank"></span></h4>
+			  <h4>Delivery Location:S<span id="pc" class="blank"></span></h4>
+			  <h4>Contact Person:<span id="name" class="blank"></span></h4>
+			  <h4>Contact Number:<span id="contact" class="blank"></span></h4>
+			  <br>
+
+			  <h2><b><u>Billing Order</u></b></h2>
+			  <h4>Credit Card NUmber:<span id="card_num" class="blank"></span></h4>
+			  <h4>Card type:<span id="card_type" class="blank"></span></h4>
+			  <h4>Expiry Date:<span id="exMth" class="blank"></span>/<span id="exYr" class="blank"></span></h4>
+			  <h4>Name on Card:<span id="name_on_card" class="blank"></span></h4><br>
+
+				<input type="button" class="form-output" onclick="completedFunc()" value="Acknowledged Completion"/>
+			</article>
+			<script>
+				for (var i=0; i < formArray.length; ++i) {
+					para=formArray[i].split("=");
+					switch (para[0]) {
+						case "name":
+									document.getElementById("name").innerHTML=para[1];
+									break;
+						case "contact":
+									document.getElementById("contact").innerHTML=para[1];
+									break;
+				    case "date":
+									document.getElementById("date").innerHTML=para[1];
+									break;
+				    case "pc":
+									document.getElementById("pc").innerHTML=para[1];
+									break;
+				    case "card_num":
+				          document.getElementById("card_num").innerHTML=para[1];
+				          break;
+				    case "card_type":
+									document.getElementById("card_type").innerHTML=para[1];
+									break;
+				    case "name_on_card":
+									document.getElementById("name_on_card").innerHTML=para[1];
+									break;
+				    case "exMth":
+									document.getElementById("exMth").innerHTML=para[1];
+									break;
+				    case "exYr":
+									document.getElementById("exYr").innerHTML=para[1];
+									break;
+					  }
+					}
+			</script>
+			<div class="company-details">
+				<h3>------Any Enquiries? Contact us!------</h3>
+				<p>Call us at 6550 7633</p><br>
+				<p><button><a href="mailto:tjy2460@gmail.com">Email us</a></button></p>
+				<p><a href="#">Go Top</a></p>
+				<br>
+				<br>
+			</div>
+	</body>
+</html>

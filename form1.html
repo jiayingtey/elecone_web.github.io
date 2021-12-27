@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sign Up</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="script.js" async></script>
+  </head>
+  <body>
+    <header>
+      <div class="main">
+        <div class="logo" >
+          <img src="images/logo-octocat.svg" width="40px" height="40px">
+          <h2>ELECLONE</h2>
+        </div>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li ><a href="camera1.html">Camera</a></li>
+          <li><a href="server1.html">Server</a></li>
+          <li><a href="#analytics1.html">AI analytics</a></li>
+          <li class="cart">
+            <a href="cart.html">
+              <ion-icon name="basket"></ion-icon>Cart<span>&nbsp;0</span>
+            </a>
+          </li>
+          <li class="current"><a href="#">Sign up</a></li>
+        </ul>
+        <div class="tagline1">
+          <img src="images/undraw_helpful_sign_s6al.svg" style="float:left;" width="300px" height="300px">
+          <h1>Let us lead you into your future.</h1>
+        </div>
+    </header>
+    <div class="start">
+      <h2>-----Create your ELECONE account-----</h2>
+      <br>
+      <br>
+      <h4>Access to FREE trails, starter kits and demos!</h4>
+      <h4>Receive announcements, recommendations and updates about<br> ELECLONE products, services and software!</h4><br>
+      <h4>Receive new releases, exclusive content, special offers and recommendations!</h4><br><br><br>
+    </div>
+
+    <form method="get" action="formprocessor.html">
+      <legend>SIGN UP</legend>
+      <label for="name">
+      <input type="text"  class="form-input" id="name" name="name" placeholder="Your Name" required /></label>
+      <br>
+      <label for="contact">
+      <input type="text" class="form-input" name="contact" pattern="\d{8}" title="8 digits"
+      id="contact" placeholder="Your number" required /></label>
+      <br>
+      <label for="email">
+      <input type="email" class="form-input" id="email" name="email" placeholder="Email" required /></label>
+      <br>
+      <label for="password">
+      <input type="password" class="form-input" id="password" name="password" placeholder="Create your password" required /></label>
+      <br>
+
+      <input type="submit"  class="form-output" value="Submit"></input>
+    </form>
+
+    <div class="company-details">
+      <h3>------Any Enquiries? Contact us!------</h3>
+      <p>Call us at 6550 7633</p><br>
+      <p><button><a href="mailto:tjy2460@gmail.com">Email us</a></button></p>
+      <p><a href="#">Go Top</a></p>
+      <br>
+      <br>
+    </div>
+  </body>
+</html>

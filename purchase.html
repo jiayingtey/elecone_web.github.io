@@ -1,0 +1,139 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Purchase</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+      function warnBack(){
+        let transactionStatus= localStorage.getItem('isTransacted');
+
+        if (transactionStatus != null){
+          if(transactionStatus != undefined){
+            if(transactionStatus="Yes"){
+              alert("Purchase is completed. Please return to home page");
+              localStorage.removeItem("isTransacted");
+              window.history.forward();
+            }
+          }
+        }
+      }
+      setTimeout("warnBack()",0);
+
+    </script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="script.js" async></script>
+
+  </head>
+  <body>
+    <header>
+      <div class="main">
+        <div class="logo" >
+          <img src="images/logo-octocat.svg" width="40px" height="40px">
+          <h2>ELECLONE</h2>
+        </div>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+
+          <li ><a href="camera1.html">Camera</a></li>
+          <li><a href="server1.html">Server</a></li>
+          <li><a href="analytics1.html">AI analytics</a></li>
+          <li class="cart">
+            <a href="cart.html">
+              <ion-icon name="basket"></ion-icon>Cart<span>0</span>
+            </a>
+          </li>
+          <li ><a href="form1.html">Sign up</a></li>
+        </ul>
+      <div class="tagline">
+        <img src="images/undraw_online_wishes_dlmr.svg" width="300px" height="200px">
+        <h1>Thanks for ordering with us</h1>
+      </div>
+    </header>
+    <div class="start">
+      <h2>Fill in the details below to confirm your order~</h2>
+    </div>
+
+    <form id="formPurchase" method="get" action="formprocessor2.html" onsubmit="ordercfm()">
+        <legend><b>Delivery Details</b></legend>
+        <label for="name">
+        <input type="text"  class="form-input" id="name" name="name" placeholder="Contact Person" required /></label>
+        <br>
+        <label for="contact">
+        <input type="text" class="form-input" name="contact" pattern="\d{8}" title="8 digits"
+        id="contact" placeholder="Your number" required /></label>
+        <br>
+        <label for="pc">
+        <input type="text"  class="form-input" id="pc" name="pc" pattern="\d{6}" title="6 digits"
+        placeholder="Postal Code" required /></label>
+        <br>
+        <label for="date">
+        <input type="date"  class="form-input" id="date" name="date" placeholder="Delivery Date(dd/mm/yy)" required /></label>
+        <br>
+
+
+        <legend ><b>Billing details</b></legend>
+        <label for="card_type">Card Type:</label><br>
+        <label for="Amex">Amex&nbsp;<input type="radio" id="Amex" name="card_type" value="Amex" required/>&emsp;</label>
+        <label for="Visa">VISA&nbsp;<input type="radio" id="Visa" name="card_type" value="Visa" required/>&emsp;</label>
+        <label for="MC">MC&nbsp;<input type="radio" id="MC" name="card_type" value="MC" required/>&emsp;</label>
+        <br>
+        <br>
+        <label for="exp_date">Expiry Date:</label>
+        <input name="exMth" list="exMth">
+        <datalist id="exMth">
+        <option  value="0">Enter month</option>
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option id="exMth" value="12">December</option>
+        </datalist>
+
+        <input name="exYr" list="exYr">
+        <datalist id="exYr">
+         <option  value="0">Enter year</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+            <option value="2031">2031</option>
+        </datalist>
+        <br>
+        <br>
+        <label for="card_num">
+        <input type="text" class="form-input" id="card_num" name="card_num"  pattern="\d{16}" title="16 digits"
+        placeholder="Card Number" required /></label><br>
+
+
+        <label for="name_on_card">
+        <input type="name_on_card"  class="form-input" id="name_on_card" name="name_on_card" placeholder="Name on Card" required /></label>
+        <br>
+        <input type="submit"  class="form-output" value="Submit"/>
+        <br>
+        <br>
+      </form>
+    <div class="company-details">
+      <h3>------Any Enquiries? Contact us!------</h3>
+      <p>Call us at 6550 7633</p><br>
+      <p><button><a href="mailto:tjy2460@gmail.com">Email us</a></button></p>
+      <p><a href="#">Go Top</a></p>
+      <br>
+      <br>
+    </div>
+</body>
+</html>

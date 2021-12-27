@@ -1,0 +1,353 @@
+/*>>>>>>>>STANDARDISED styling for all webpages(START)*/
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Century Gothic";
+}
+.main{
+  width:1200px;
+  margin:auto;
+}
+.logo{
+  display:flex;
+  padding-top: 15px;
+}
+
+body{
+  background: #aa4b6b;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+header{
+  background-size: 1500px;
+  background-position: center;
+  height: 500px;
+}
+ul{
+  float:right;
+  list-style-type: none;
+  margin-right:10px;
+}
+ul li{
+  display:inline-block;
+}
+ul li a{
+  text-decoration: none;
+  color:#fff;
+  padding: 5px 20px;
+  border:1px solid transparent;
+  transition: 0.6s ease;
+  border-radius: 50%;
+
+}
+.current a{
+  background-color:#fff;
+  color:#000;
+}
+ul li a:hover{
+  background-color:#fff;
+  color:#000;
+}
+/*cart icon styling*/
+span{
+  padding-left: 5px;
+}
+.cart ion-icon{
+  vertical-align: bottom;
+  font-size: 20px;
+  padding-right: 5px;
+}
+.cart a{
+  background-color: transparent;
+  color:#fff;
+  cursor:pointer;
+  text-decoration: none;
+}
+.cart span{
+  background-color:royalblue;
+  padding-right: 10px;
+  border-radius: 50%;
+}
+
+/*Tagline styling for all pages*/
+.tagline, .tagline1{
+  position:absolute;
+  margin-top: 5%;
+  margin-left:20%;
+}
+.tagline h1{
+  color:white;
+  text-align: center;
+  font-size:70px;
+  font-family: "Brush Script MT";
+}
+.tagline h3{
+  color:#fff;
+  text-align:center;
+  font-size:20px;
+  font-family: "Brush Script MT"
+}
+.tagline1 h1{
+  color:white;
+  text-align: center;
+  margin-top: 5%;
+  font-size:60px;
+  font-family:"Brush Script MT";
+}
+
+.start h2{
+  text-align: center;
+  color:white;
+  margin-bottom: 20px;
+  text-shadow: 7px 7px grey;
+}
+.start h3, h4,h5{
+  text-align: center;
+  color:white;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px grey;
+
+}
+
+/*For "contact us" at end of every webpage*/
+.company-details{
+  height:100px;
+  width:100%;
+  margin-top:30px;
+
+}
+.company-details h3{
+  padding: 20px;
+
+}
+.company-details p{
+  font-size:18px;
+}
+.company-details button{
+  outline:none;
+  border:none;
+  background: transparent;
+  margin-bottom: 30px;
+}
+.company-details a{
+  color:white;
+  font-size:18px;
+}
+
+/*STANDARDISED styling for all webpages(END)*/
+/*-------------------------------------------------------------------------*/
+
+/*>>>>>>For HOME page (home.html) START*/
+.business iframe{
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10%;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  width:40%;
+}
+.business h1{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.business h1,h3,h4,p{
+  text-align: center;
+  color:white;
+  margin-top: 5px;
+  margin-bottom:5px;
+}
+.business p span{
+  font-weight: bold;
+  font-style: italic;
+  font-size:20px;
+}
+
+/*>>>For home & analytics webpage*/
+.description{
+  text-align: center;
+  padding:20px;
+}
+.description h2, h3, h4,p{
+  text-align: center;
+  color: white;
+}
+.description h2{
+  text-shadow: 2px 2px grey;
+  padding: 0;
+  margin: 0;
+}
+.description span{
+  font-style: italic;
+  font-weight: bold;
+}
+.description a{
+  font-size:20px;
+  color:white;
+  font-weight: bold;
+}
+.data img{
+  width:500px;
+  height:300px;
+}
+.description:hover .cart7{
+  opacity:1;
+  padding:10px;
+  text-decoration: none;
+}
+.description .cart7{
+
+  width:10%;
+
+
+}
+/*For HOME page (home.html) END*/
+/*------------------------------------------------*/
+
+/*>>>>For Server and Camera webpage START*/
+.description1 h2{
+  text-shadow: 2px 2px grey;
+  text-align: center;
+  margin-top: 10px;
+}
+.description1{  border-color: inherit;
+
+}
+.description1 h3, h4{
+  text-align: center;
+  margin: 5px;
+  font-size:20px;
+  padding: 5px;
+}
+
+.container {
+  display: flex;
+}
+.image{
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+.image img{
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20%;
+}
+.add-cart{
+  position: absolute;
+  width:22%;
+  background-color: lightgrey;
+  transition: all 0.6s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 10%;
+  outline:transparent;
+
+}
+
+.image:hover .cart1,
+.image:hover .cart2,
+.image:hover .cart3,
+.image:hover .cart4,
+.image:hover .cart5,
+.image:hover .cart6{
+
+  bottom:auto;
+  opacity:1;
+  padding:10px;
+  text-decoration: none;
+}
+
+/*>>>>For Server and Camera webpage END*/
+/*------------------------------------------------*/
+
+
+/*For tables on all webpages except for cart webpage*/
+table td{
+  padding:20px;
+  width:50%;
+}
+table{
+  margin-left: 10%;
+  margin-right: 10%;
+  border-collapse: collapse;
+  border-color: transparent;
+  margin-left: 100px;
+}
+
+/*Cart webpage--> inline stylling*/
+
+
+/*>>>>>>>FORM styling START*/
+/*For SIGN UP PAGE(form1.html)*/
+form{
+	margin:0 auto;
+  margin-bottom: 100px;
+  padding: 20px;
+	width:60%;
+  text-align: center;
+  background: #de6161;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #2657eb, #de6161);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #2657eb, #de6161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-radius: 35%;
+}
+.form-input{
+  width:600px;
+  outline: none;
+  background: transparent;
+  border:none;
+  border-bottom: 1px solid black;
+  color:#fff;
+  font-size:20px;
+  margin-bottom:25px;
+}
+.form-output{
+  width:600px;
+  outline:none;
+  border:none;
+  font-size: 20px;
+  background: #457fca;  /* fallback for old browsers */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 45%;
+}
+legend{
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 30px;
+}
+input::placeholder{
+  color:white;
+
+}
+form label{
+  color:white;
+  font-size: 20px;
+}
+
+
+
+/*For form processor page*/
+article{
+  margin:0 auto;
+  margin-bottom: 100px;
+  padding: 50px;
+	width:60%;
+  height:auto;
+  text-align: center;
+  background: #de6161;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #2657eb, #de6161);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #2657eb, #de6161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 35%;
+}
+article h1, h4{
+  color: white;
+  padding:5px;
+}
+
+/*FORM styling END*/
+/*------------------------------------------------*/

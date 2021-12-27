@@ -1,0 +1,83 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<title>Form Processor</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Home</title>
+		<link href="styles.css" rel="stylesheet" type="text/css" />
+		<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+		<script src="script.js" async></script>
+	</head>
+	<body>
+		<header>
+			<div class="main">
+				<div class="logo" >
+					<img src="images/logo-octocat.svg" width="40px" height="40px">
+					<h2>ELECLONE</h2>
+				</div>
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li ><a href="camera1.html">Camera</a></li>
+					<li ><a href="server1.html">Server</a></li>
+					<li ><a href="analytics1.html">AI analytics</a></li>
+					<li class="cart">
+						<a href="cart.html">
+							<ion-icon name="basket"></ion-icon>Cart<span>&nbsp;0</span>
+						</a>
+					</li>
+					<li class="current"><a href="form1.html">Sign up</a></li>
+				</ul>
+				<div class="tagline1">
+					<img src="images/undraw_new_message_2gfk.svg" width="300px" height="200px">
+					<h1>Check your mailbox for "$15 to $5"</h1>
+				</div>
+		</header>
+
+		<script type="text/javascript">
+			var formData = location.search;
+			console.log(location.search)
+			formData = formData.substring(1, formData.length);
+			while (formData.indexOf("+") != -1) {
+				formData = formData.replace("+", " ");
+			}
+			formData = unescape(formData);
+			var formArray = formData.split("&");
+			var para=new Array();
+		</script>
+		<article>
+			<h1>You are a member of ELECLONE now!</h1>
+			<h4>Dear<span id="name" class="blank"></span>,<br>Good to have you in our ELECLONE family.<br>
+			 Be sure to stay tuned to your email&nbsp;(<span id="email" class="blank"></span>) or your smartphone &nbsp;(number:<span id="contact" class="blank"></span>)
+			 for notifications of our
+			 good deals and promotions!!
+			</h4>
+		</article>
+		<script>
+			for (var i=0; i < formArray.length; ++i) {
+				para=formArray[i].split("=");
+				switch (para[0]) {
+					case "email":
+								document.getElementById("email").innerHTML=para[1];
+								break;
+					case "name":
+								document.getElementById("name").innerHTML=para[1];
+								break;
+					case "contact":
+								document.getElementById("contact").innerHTML=para[1];
+								break;
+			    }
+			}
+		</script>
+
+
+		<div class="company-details">
+			<h3>------Any Enquiries? Contact us!------</h3>
+			<p>Call us at 6550 7633</p><br>
+			<p><button><a href="mailto:tjy2460@gmail.com">Email us</a></button></p>
+			<p><a href="#">Go Top</a></p>
+			<br>
+			<br>
+		</div>
+	</body>
+</html>
